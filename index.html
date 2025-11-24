@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HighMark Career - AI Interview Coach</title>
-    <!-- 引入 Tailwind CDN：这是“自动美颜相机”，不用编译直接美化界面 -->
+    <!-- Tailwind CSS CDN for immediate styling in preview environments -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 配置海马职加的专属颜色 -->
     <script>
       tailwind.config = {
         theme: {
@@ -27,19 +26,7 @@
         }
       }
     </script>
-    <!-- 注意：删除了 importmap，因为它会导致 React 版本冲突错误 #31 -->
-    
-    <!-- 添加自定义样式覆盖，防止闪烁 -->
-    <style>
-      body {
-        background-color: #F5F7FA;
-        color: #0F172A;
-      }
-      /* 强制显示加载前的基本颜色 */
-      .bg-hm-dark { background-color: #0A192F; }
-      .bg-hm-orange { background-color: #FF6B00; }
-    </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
