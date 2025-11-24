@@ -1,12 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InterviewPro.AI - AI求职助教</title>
+    <title>HighMark Career - AI Interview Coach</title>
+    <!-- 引入 Tailwind CDN：这是“自动美颜相机”，不用编译直接美化界面 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 配置海马职加的专属颜色 -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              hm: {
+                orange: '#FF6B00',
+                dark: '#0A192F',
+                blue: '#0056D2',
+                gray: '#F5F7FA',
+              }
+            },
+            fontFamily: {
+              sans: ['"PingFang SC"', '"Microsoft YaHei"', 'Inter', 'sans-serif'],
+              display: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react": "https://esm.sh/react@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "react-markdown": "https://esm.sh/react-markdown@9.0.1",
+    "recharts": "https://esm.sh/recharts@2.12.2",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+    <!-- 添加自定义样式覆盖，防止闪烁 -->
+    <style>
+      body {
+        background-color: #F5F7FA;
+        color: #0F172A;
+      }
+      /* 强制显示加载前的基本颜色 */
+      .bg-hm-dark { background-color: #0A192F; }
+      .bg-hm-orange { background-color: #FF6B00; }
+    </style>
   </head>
-  <body>
+  <body class="bg-hm-gray text-slate-900 antialiased">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
