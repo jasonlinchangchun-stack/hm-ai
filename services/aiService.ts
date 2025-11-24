@@ -1,5 +1,4 @@
 import { InterviewConfig, InterviewReport } from "../types";
-import { GENERATE_REPORT_SCHEMA } from "../constants";
 
 // Helper function to safely get the API key without crashing
 const getApiKey = () => {
@@ -76,8 +75,8 @@ export const sendMessageToAI = async (
 ): Promise<{ text: string, audioData?: string }> => {
   
   if (!API_KEY) {
-    // Alert the user only when they actually try to use it, not on app load
-    alert("API Key 未配置。请在 Vercel 环境变量中设置 VITE_DEEPSEEK_API_KEY");
+    // Alert the user only when they actually try to use it
+    alert("API Key 未找到。请确保在 Vercel 的 Settings -> Environment Variables 中添加了 VITE_DEEPSEEK_API_KEY，并且在添加后重新 Redeploy 了项目。");
     throw new Error("API Key missing");
   }
 
